@@ -10,4 +10,7 @@
 
 @interface CCViewController : UIViewController
 
+    /** When the togglePassing button is tapped */
+    - (IBAction)togglePassingTapped:(id)sender;
+
 @end

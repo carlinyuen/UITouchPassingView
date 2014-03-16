@@ -17,6 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p59-26-PVe" customClass="UITouchPassingView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="2JI-hL-gsB"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vb0-ar-094">
                                 <rect key="frame" x="40" y="164" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,14 +44,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p59-26-PVe" customClass="UITouchPassingView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="2JI-hL-gsB"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TouchPassingView Bounds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5n-X6-DgZ">
                                 <rect key="frame" x="0.0" y="40" width="320" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll Here!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-fQ-RUq">
-                                <rect key="frame" x="40" y="500" width="240" height="21"/>
+                                <rect key="frame" x="40" y="480" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Elq-La-n8u"/>
@@ -66,16 +66,32 @@
                                 <color key="textColor" red="0.21409934529999999" green="0.94758063550000005" blue="0.041817182250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-oJ-w9y">
+                                <rect key="frame" x="20" y="524" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="izR-uN-zR5"/>
+                                </constraints>
+                                <state key="normal" title="Toggle Touch Passing">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="togglePassingTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="I0q-0B-V93"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Vb0-ar-094" secondAttribute="centerX" id="CMt-Az-ICu"/>
                             <constraint firstItem="Vb0-ar-094" firstAttribute="leading" secondItem="Cf2-xS-b0p" secondAttribute="leading" id="GoZ-Ds-N7b"/>
                             <constraint firstItem="p59-26-PVe" firstAttribute="top" secondItem="U5n-X6-DgZ" secondAttribute="bottom" id="Mud-ZF-ELi"/>
-                            <constraint firstItem="cOX-fQ-RUq" firstAttribute="top" secondItem="p59-26-PVe" secondAttribute="bottom" constant="-24" id="QAM-tc-2JN"/>
+                            <constraint firstAttribute="trailing" secondItem="Dco-oJ-w9y" secondAttribute="trailing" constant="20" id="N8Q-NS-dib"/>
+                            <constraint firstItem="cOX-fQ-RUq" firstAttribute="top" secondItem="p59-26-PVe" secondAttribute="bottom" constant="-44" id="QAM-tc-2JN"/>
                             <constraint firstAttribute="centerX" secondItem="cOX-fQ-RUq" secondAttribute="centerX" id="RLC-qh-e8v"/>
                             <constraint firstItem="p59-26-PVe" firstAttribute="leading" secondItem="U5n-X6-DgZ" secondAttribute="leading" id="VGq-v0-cOG"/>
+                            <constraint firstItem="Dco-oJ-w9y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="bIc-ug-GLx"/>
                             <constraint firstItem="aNM-Bb-KcA" firstAttribute="top" secondItem="p59-26-PVe" secondAttribute="bottom" constant="44" id="dC1-hx-1FE"/>
+                            <constraint firstItem="aNM-Bb-KcA" firstAttribute="top" secondItem="Dco-oJ-w9y" secondAttribute="bottom" id="fcf-rV-7dS"/>
                             <constraint firstAttribute="centerY" secondItem="Vb0-ar-094" secondAttribute="centerY" id="kyf-yy-8Nt"/>
                             <constraint firstAttribute="centerX" secondItem="p59-26-PVe" secondAttribute="centerX" id="qRA-Rn-bYJ"/>
                             <constraint firstItem="p59-26-PVe" firstAttribute="top" secondItem="Ut3-Qj-dCE" secondAttribute="bottom" constant="44" id="xqy-5i-ToN"/>

@@ -15,6 +15,7 @@
 {
     self = [super init];
     if (self) {
+        _touchPassingDisabled = false;
         _targetView = targetView;
     }
     return self;
@@ -25,6 +26,7 @@
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
 	UIView *child = nil;
     if ((child = [super hitTest:point withEvent:event]) == self
+        && !self.touchPassingDisabled
         && self.targetView) {
     	return self.targetView;
 	}

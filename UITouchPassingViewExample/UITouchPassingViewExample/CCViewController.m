@@ -82,4 +82,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)togglePassingTapped:(UIButton *)sender {
+    // Toggle touchPassing on and off
+    self.overlayView.touchPassingDisabled = !self.overlayView.touchPassingDisabled;
+
+    [sender setTitle:[NSString stringWithFormat:@"Touch Passing %@", (self.overlayView.touchPassingDisabled ? @"OFF" : @"ON")] forState:UIControlStateNormal];
+}
+
 @end
