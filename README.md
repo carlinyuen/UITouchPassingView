@@ -1,9 +1,9 @@
 UITouchPassingView
 ==================
 
-Simple iOS UIView subclass that implements basic touch passing so you can relay touches to another view. Useful in cases where you want the touchable area to be larger than visible bounds of a particular view. 
+Simple iOS UIView subclass that implements basic touch passing so you can relay touches to another view. Useful in cases where you want the touchable area to be larger than visible bounds of a particular view. Common example: scrollview with pages where you can see edges of the next and previous page, but want to be able to scroll outside of the bounds of the page.
 
-Keywords: ios, xcode, view, touch, pass, through, relay.
+Keywords: ios, xcode, view, touch, pass, through, relay, scrollview.
 
 ## Usage
 Super simple steps:
